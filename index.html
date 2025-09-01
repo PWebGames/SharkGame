@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00aaff">
+    <link rel="icon" href="favicon.ico" sizes="any">
+
     <!-- Welcome to a shark. I hope you enjoy this aquatic organism. -->
 
     <title>Shark Game</title>
@@ -157,5 +161,13 @@
         </div>
         <div id="preloadedImages"></div>
     </div>
+    <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registered"))
+      .catch(err => console.error("SW registration failed:", err));
+  }
+</script>
+
 </body>
 </html>
